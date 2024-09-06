@@ -10,9 +10,122 @@
 @import url('./container.css');
 @import url('./animations.css');
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+
+.load-more-container {
+  margin: 0 auto;
+  padding-top: 22px;
+}
+
+.load-more {
+  border-radius: 8px;
+  padding: 8px 16px;
+  background: #4e75ff;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  border: none;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.loader .is-hidden {
+  display: none;
+}
+
+.loader {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #3498db;
+  animation: spin 1s ease-in-out infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.search-form {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-form>input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #dcd0d0;
+}
+
+.search-form>button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(34, 156, 156);
+  color: #fff;
+  font-weight: 700;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 24px 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-item {
+  max-width: 360px;
+  height: 100%;
+  transition: transform 250ms ease-in-out, box-shadows 250ms ease-in-out;
+}
+
+.gallery-item:hover {
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.75);
+  transform: scale(1.05);
+}
+
+.gallery-image {
+  display: block;
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.img-content-wrapper {
+  padding: 5px 10px;
+  display: flex;
+  gap: 27px;
+  border-bottom: 1px solid #808080;
+  border-left: 1px solid #808080;
+  border-right: 1px solid #808080;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.img-content-descr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
